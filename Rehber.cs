@@ -57,34 +57,30 @@ public class Rehber{
         Console.WriteLine("(3) Var olan numarayı güncellemek");
         Console.WriteLine("(4) Rehberi listelemek");
         Console.WriteLine("(5) Rehberde arama yapmak");
-        Console.WriteLine("Programı sonlandırmak için 'q' ya basınız");
         Console.WriteLine();
         Console.WriteLine();
         
         
         //yanlış karakter girdisi olsa bile ekrana hata mesajı verip menüyü yeniden çağıran kod bloğu
         try{
-           string secim=Console.ReadLine();
+           int secim=Convert.ToInt32(Console.ReadLine());
            Console.WriteLine();
-           if(secim=="1")
+           if(secim==1)
            this.NumaraEklemek();
 
-           if(secim=="2")
+           if(secim==2)
            this.NumaraSil();
 
-           if(secim=="3")
+           if(secim==3)
            this.Guncelleme();
     
-           if(secim=="4")
+           if(secim==4)
            this.Listele();
 
-           if(secim=="5")
+           if(secim==5)
            this.Arama();
 
-           if(secim=="q"){
-            Environment.Exit('q');
-           }
-       }
+        }
 
 
         catch{
